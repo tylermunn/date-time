@@ -13,7 +13,8 @@ function onClick() {
     var min = String(today.getMinutes()).padStart(2, '0');
     var secs = String(today.getSeconds()).padStart(2, '0');
 
-    today = mm + "/" + dd + "/" + yyyy //create a formatted date
+    //create a formatted date
+    today = mm + "/" + dd + "/" + yyyy 
 
     function formatTime(hour, min, secs) { //function to format the time (leading zeroes, am/pm)
         if (hour <= 12) {
