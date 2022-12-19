@@ -26,8 +26,6 @@ function onClick() {
 
     var time = formatTime(hour, min, secs);
 
-
-
     var dateLocation = document.querySelector(".date").innerHTML = today; //replace HTML elements with the calculated date and time
     var timeLocation = document.querySelector(".time").innerHTML = time;
 }
