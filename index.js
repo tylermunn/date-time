@@ -2,7 +2,8 @@ var btn = document.querySelector(".btn");
 btn.addEventListener("click", onClick);
 
 function onClick() {
-    var today = new Date(); //get current date
+    // set new date on every button click
+    var today = new Date(); 
 
     var dd = String(today.getDate()).padStart(2, '0'); //2 digits, leading 0 if single digit month
     var mm = String(today.getMonth() + 1).padStart(2, '0'); //2 digits, leading 0 if single digit month, +1 deals with January
