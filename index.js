@@ -5,8 +5,9 @@ function onClick() {
     // set new date on every button click
     var today = new Date(); 
 
-    var dd = String(today.getDate()).padStart(2, '0'); //2 digits, leading 0 if single digit month
-    var mm = String(today.getMonth() + 1).padStart(2, '0'); //2 digits, leading 0 if single digit month, +1 deals with January
+    // set day/month/year with leading zeroes for formatting (+1 deals with january
+    var dd = String(today.getDate()).padStart(2, '0'); 
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); 
     var yyyy = String(today.getFullYear());
 
     var hour = String(today.getHours()).padStart(2, '0');
@@ -16,7 +17,7 @@ function onClick() {
     //create a formatted date
     today = mm + "/" + dd + "/" + yyyy 
 
-    function formatTime(hour, min, secs) { //function to format the time (leading zeroes, am/pm)
+    function formatTime(hour, min, secs) { 
         if (hour <= 12) {
             return hour + ":" + min + ":" + secs + " AM";
         } else {
@@ -26,6 +27,7 @@ function onClick() {
 
     var time = formatTime(hour, min, secs);
 
-    var dateLocation = document.querySelector(".date").innerHTML = today; //replace HTML elements with the calculated date and time
+    //replace HTML elements with the calculated date and time
+    var dateLocation = document.querySelector(".date").innerHTML = today; 
     var timeLocation = document.querySelector(".time").innerHTML = time;
 }
